@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7bd3a086-9cba-41b5-a15c-73e5460cea16" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../models/Ablation/STHMamba.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exp/exp_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exp/exp_basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exp/exp_stocks_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exp/exp_stocks_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layers/mamba_ssm_test/modules/mamba_simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/../layers/mamba_ssm_test/modules/mamba_simple.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/STGMamba.py" beforeDir="false" afterPath="$PROJECT_DIR$/../models/STGMamba.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/STHMamba.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/STHMamba_modify.py" beforeDir="false" afterPath="$PROJECT_DIR$/../models/STHMamba_modify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/STHMamba_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../models/STHMamba_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/pretrain/generate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/pretrain/long_term_forecast_NYSEtest_STHMamba_NASDAQ_ftMS_sl120_ll0_pl1_dm24_nh4_el2_lr6.5e-05_lsrank_bs8_a9.0_conv1d_relu_mean_share2_32_+2048_0/train.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../models/pretrain/pretrain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/STGMamba.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/STGMamba.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/STHMamba_1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/STHMamba_1.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/STHMamba_2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/STHMamba_2.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/STHMamba_nas0.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/STHMamba_nas0.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/STHMamba_nas1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/STHMamba_nas1.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/STHMamba_nas3.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/STHMamba_nas3.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/stock_baseline/DLinear.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/stock_baseline/DLinear.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/stock_baseline/PatchTST.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/stock_baseline/PatchTST.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/stock_baseline/iTransformer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/stock_baseline/iTransformer.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.virtual_documents/Untitled.ipynb.py" beforeDir="false" afterPath="$PROJECT_DIR$/.virtual_documents/Untitled.ipynb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metrics_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/metrics_test.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2xPOBIPjIyS4J1i5yMPNsDKyOyh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "ssh.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bd3a086-9cba-41b5-a15c-73e5460cea16" name="Changes" comment="" />
+      <created>1747836105186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747836105186</updated>
+      <workItem from="1747836106835" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
