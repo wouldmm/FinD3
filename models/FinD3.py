@@ -477,22 +477,10 @@ class EHA(nn.Module):
                 result = F.gumbel_softmax(logits, tau=tau, hard=True, dim=-1)
                 result = result[..., 1]  # soft二值化
                 # print(result.sum(dim=1))
-                dense_mod = dense.detach().clone()
                 if test_mod == 0:
                     graph_loss += self.hypergraph_laplacian_loss(result, hgat_out)
 
                 result_mod = result.detach().clone()
-                row_sums = result_mod.sum(dim=2)  # [B, N]
-                zero_rows = (row_sums == 0)  # [B, N]
-                max_edge_indices = dense_mod.argmax(dim=2)  # [B, N]
-                result_mod[zero_rows, max_edge_indices[zero_rows]] = 1.0
-
-                col_sums = result_mod.sum(dim=1)  # [B, N]
-                zero_cols = (col_sums == 0)  # [B, N]
-                max_node_indices = dense_mod.argmax(dim=1)  # [B, N]
-                batch_idx, edge_idx = torch.where(zero_cols)
-                node_idx = max_node_indices[batch_idx, edge_idx]
-                result_mod[batch_idx, node_idx, edge_idx] = 1.0
                 sparse_tensor = [dense_to_sparse(result_mod[b])[0] for b in range(bs)]
         graph_loss /= x.shape[2]
 
