@@ -1,5 +1,6 @@
 dataset/*
 results/*
 .idea
-/.idea
-.idea/workspace.xml
+visualization/.idea
+visualization/.ipynb_checkpoints
+visualization/.virtual_documents
