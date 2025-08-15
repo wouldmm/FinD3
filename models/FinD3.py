@@ -10,7 +10,7 @@ from torch_geometric.nn import HypergraphConv
 from tqdm import tqdm
 
 from layers.revin import RevIN
-from layers.mamba_ssm_test.modules.mamba_simple import MambaConv2d, Mamba
+from layers.cubessm.modules.mamba_simple import MambaConv2d, Mamba
 
 from layers.pos_encoding import *
 from layers.basics import *
