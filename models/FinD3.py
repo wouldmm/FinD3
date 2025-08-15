@@ -91,6 +91,11 @@ class Model(nn.Module):
                              num_stocks=self.num_nodes, features=self.n_vars, d_model=self.d_model, dropout=self.dropout, hidden_dim=configs.hidden_dim,
                              n_heads=configs.n_heads, k=configs.k, patch_len=self.patch_len, stride=self.stride, init_edges=self.num_edges, ltedge=configs.ltedge,
                              use_fast_path=False, share_emb=configs.share_emb, device=self.device, bais=configs.gum_bais)
+        elif configs.market == 'TSE':
+            self.ehgat = EHA(path=os.path.join(configs.root_path, configs.data_path, '..', 'relation/dtw', configs.market + '_dtw_relation_train_top10_mix.npy'),
+                             num_stocks=self.num_nodes, features=self.n_vars, d_model=self.d_model, dropout=self.dropout, hidden_dim=configs.hidden_dim,
+                             n_heads=configs.n_heads, k=configs.k, patch_len=self.patch_len, stride=self.stride, init_edges=self.num_edges, ltedge=configs.ltedge,
+                             use_fast_path=False, share_emb=configs.share_emb, device=self.device, bais=configs.gum_bais)
 
 
         # Head
@@ -477,10 +482,22 @@ class EHA(nn.Module):
                 result = F.gumbel_softmax(logits, tau=tau, hard=True, dim=-1)
                 result = result[..., 1]  # soft二值化
                 # print(result.sum(dim=1))
+                dense_mod = dense.detach().clone()
                 if test_mod == 0:
                     graph_loss += self.hypergraph_laplacian_loss(result, hgat_out)
 
                 result_mod = result.detach().clone()
+                row_sums = result_mod.sum(dim=2)  # [B, N]
+                zero_rows = (row_sums == 0)  # [B, N]
+                max_edge_indices = dense_mod.argmax(dim=2)  # [B, N]
+                result_mod[zero_rows, max_edge_indices[zero_rows]] = 1.0
+
+                col_sums = result_mod.sum(dim=1)  # [B, N]
+                zero_cols = (col_sums == 0)  # [B, N]
+                max_node_indices = dense_mod.argmax(dim=1)  # [B, N]
+                batch_idx, edge_idx = torch.where(zero_cols)
+                node_idx = max_node_indices[batch_idx, edge_idx]
+                result_mod[batch_idx, node_idx, edge_idx] = 1.0
                 sparse_tensor = [dense_to_sparse(result_mod[b])[0] for b in range(bs)]
         graph_loss /= x.shape[2]
 
