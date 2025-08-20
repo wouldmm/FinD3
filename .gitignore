@@ -4,3 +4,4 @@ results/*
 visualization/.idea
 visualization/.ipynb_checkpoints
 visualization/.virtual_documents
+visualization_origin/*
