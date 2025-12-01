@@ -7,6 +7,17 @@ Overview
 --------
 FinD3 implements a Dual 3D State Space model augmented with a dynamic hypergraph for financial stock prediction. This repo provides the code, data provider utilities, model definitions, experiment entrypoints and visualization tools used to run experiments and reproduce results from the paper.
 
+### Motivation
+**Figure 1.** Limitations of UTS/MTS: UTS ignores cross-stock & cross-feature signals; MTS captures only one. FinD3 targets full 3D-MTS dependencies for sharper forecasts.
+![Architecture](./visualization/intro.png)
+### Model Architecture
+**Figure 2.** FinD3 overview. DCSSM (left) scans 3D-MTS in dual cubic branches; EHA (right) evolves a domain-aware hypergraph stage-by-stage for dynamic market structure.
+![Architecture](./visualization/model.png)
+### Experiement Performence
+**Figure 3.** NASDAQ & NYSE test 2017. FinD3 leads in IRR (≥ 1.0) and SR (≥ 2.2) while keeping inference < 22 s, validating both accuracy and speed.
+![Architecture](./visualization/exp.png)
+
+
 Repository structure
 --------
 - .gitignore               — Git ignore rules
@@ -40,15 +51,15 @@ Quick start
 3. Prepare data
    - Dataset is followed https://github.com/fulifeng/Temporal_Relational_Stock_Ranking
 
-
 5. Example: training / evaluation / inference
-   - Since run.py is the primary entrypoint, common usages look like:
+   - run.py is the primary entrypoint:
      ```bash
-     python run.py --mode train --exp config_name_or_path
-     python run.py --mode eval  --checkpoint path/to/checkpoint
-     python run.py --mode infer --checkpoint path/to/checkpoint --output results.csv
+     python run.py
      ```
-   - Replace flags above with the actual options shown by python run.py --help and with the experiment configurations stored in exp/.
+   - or use the provided script:
+     ```bash
+     bash ./scripts/run_experiment.sh
+     ```
 
 Citation
 --------
@@ -57,7 +68,7 @@ If you use this code, please cite the CIKM 2025 paper:
 FinD3: A Dual 3D State Space Model with Dynamic Hypergraph for Financial Stock Prediction  
 https://dl.acm.org/doi/10.1145/3746252.3761239
 
-Example BibTeX (please replace the author list with the official ACM entry if needed):
+Example BibTeX:
 
 ```
 @inproceedings{mei2025FinD3,
@@ -81,8 +92,3 @@ Issues and pull requests are welcome. If you contribute experimental results or 
 License
 --------
 Check the LICENSE file in this repository for the exact license terms. If none is present and you want a license added (e.g., MIT), I can propose one.
-
-Contact
---------
-Author: wouldmm  
-GitHub: https://github.com/wouldmm
