@@ -36,7 +36,7 @@ Quick start
 --------
 1. Clone the repository
    ```bash
-   git clone https://github.com/wouldmm/FinD3.git
+   git clone https://github.com/decisionintelligence/FinD3.git
    cd FinD3
    ```
 
